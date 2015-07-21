@@ -27,26 +27,30 @@ Models & Associations:
   
   Review
 
-  Project: 
+
+Project: 
   
   has_many: pledges
   has_many: rewards
   has_many: backers, through:pledges, class_name: 'User'
   has_many: owners, class_name: 'User'
   
-  User: 
+
+User: 
   
   has_many: pledges
   has_many: owned_projects, class_name: 'Project'
   has_many: backed_projects, through: pledges, class_name: 'Project'
   
-  Pledge: 
+
+Pledge: 
   
   belongs_to: user
   belongs_to: project
   belongs_to: reward
   
-  Reward:
+
+Reward:
   
   belongs_to: project
 
