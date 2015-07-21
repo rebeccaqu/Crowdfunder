@@ -15,7 +15,7 @@ Implementation Process:
 
 Models & Associations: 
 
-- Project : name, description, funding_goal, start_date, end_date, (photos)
+- Project : name, description, funding_goal, start_date, end_date, (photos), category
   
 - User : first_name, last_name, email, password
   
@@ -23,9 +23,7 @@ Models & Associations:
   
 - Reward : name, description, amount, availability 
   
-- Category 
-  
-- Review
+- Category : name
 
 
 Project: 
@@ -51,6 +49,7 @@ Pledge:
   
 
 Reward:
+- belongs_to: project
   
 - belongs_to: project
 
