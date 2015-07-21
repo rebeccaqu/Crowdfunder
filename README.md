@@ -3,6 +3,7 @@ Crowdfunder Project: A Kickstarter Clone
 Collaborators: Keegan Wade, Paul Marshall, Craig Franklin, & Rebecca Qu
 
 Our Trello link: https://trello.com/b/DbqVminQ/crowdfunder
+-------------------------------------------------------------------------
 
 Implementation Process: 
 
