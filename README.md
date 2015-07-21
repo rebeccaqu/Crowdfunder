@@ -15,44 +15,44 @@ Implementation Process:
 
 Models & Associations: 
 
-  Project : name, description, funding_goal, start_date, end_date, (photos)
+- Project : name, description, funding_goal, start_date, end_date, (photos)
   
-  User : first_name, last_name, email, password
+- User : first_name, last_name, email, password
   
-  Pledge : amount ($)
+- Pledge : amount ($)
   
-  Reward : name, description, amount, availability 
+- Reward : name, description, amount, availability 
   
-  Category 
+- Category 
   
-  Review
+- Review
 
 
 Project: 
   
-  has_many: pledges
-  has_many: rewards
-  has_many: backers, through:pledges, class_name: 'User'
-  has_many: owners, class_name: 'User'
+- has_many: pledges
+- has_many: rewards
+- has_many: backers, through:pledges, class_name: 'User'
+- has_many: owners, class_name: 'User'
   
 
 User: 
   
-  has_many: pledges
-  has_many: owned_projects, class_name: 'Project'
-  has_many: backed_projects, through: pledges, class_name: 'Project'
+- has_many: pledges
+- has_many: owned_projects, class_name: 'Project'
+- has_many: backed_projects, through: pledges, class_name: 'Project'
   
 
 Pledge: 
   
-  belongs_to: user
-  belongs_to: project
-  belongs_to: reward
+- belongs_to: user
+- belongs_to: project
+- belongs_to: reward
   
 
 Reward:
   
-  belongs_to: project
+- belongs_to: project
 
 
 
