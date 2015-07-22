@@ -14,7 +14,7 @@ User.destroy_all()
 
 Pledge.destroy_all()
 
-u1 = User.create!(    {
+u1 = User.create!( {
                 first_name: "John",
                 last_name: "West",
                 email: "JW@bitmaker.com",
@@ -22,7 +22,7 @@ u1 = User.create!(    {
                 password_confirmation: "password"
                } )
 
-u2 = User.create!(    {
+u2 = User.create!( {
                 first_name: "Bono",
                 last_name: "West III",
                 email: "bo@no.com",
@@ -34,17 +34,35 @@ p1 = Project.create!( {name: "Save the Cats",
                  description: "A project to save the kitties.",
                  funding_goal: 10000,
                  start_date: "July 20 2015",
-                 end_date: "July 20 2015",
+                 end_date: "August 20 2015",
                  category: "Animal Rights",
-                 user_id: u2.id
+                 user_id: u1.id
                 } )
 
-Project.create!( {name: "Save the Dogs",
+p2 = Project.create!( {name: "Save the Dogs",
                  description: "A project to save the doggies.",
                  funding_goal: 10000,
                  start_date: "July 20 2015",
-                 end_date: "July 20 2015",
+                 end_date: "December 20 2015",
                  category: "Animal Rights",
+                 user_id: u1.id
+                } )
+
+p3 = Project.create!( {name: "Save the Potatoes",
+                 description: "A project to save the potatoes.",
+                 funding_goal: 50000,
+                 start_date: "March 20 2015",
+                 end_date: "July 20 2016",
+                 category: "Veggie Rights",
+                 user_id: u2.id
+                } )
+
+p4 = Project.create!( {name: "Save the Carrots",
+                 description: "A project to save the carrots.",
+                 funding_goal: 100000,
+                 start_date: "July 20 2015",
+                 end_date: "July 20 2015",
+                 category: "Veggie Rights",
                  user_id: u2.id
                 } )
 
@@ -56,7 +74,46 @@ r1 = Reward.create!( {
                 project_id: p1.id
         })
 
+r2 = Reward.create!( {
+                name: "Dognip thing",
+                description: "Smells like dognip",
+                amount: 3,
+                availability: true,
+                project_id: p2.id
+        })
+
+r3 = Reward.create!( {
+                name: "Potato thing",
+                description: "Smells like potato",
+                amount: 3,
+                availability: true,
+                project_id: p3.id
+        })
+
+r4 = Reward.create!( {
+                name: "Carrot thing",
+                description: "Smells like carrots",
+                amount: 3,
+                availability: true,
+                project_id: p4.id
+        })
+
 Pledge.create!( {
                 reward_id: r1.id,
                 user_id: u1.id
+        })
+
+Pledge.create!( {
+                reward_id: r2.id,
+                user_id: u1.id
+        })
+
+Pledge.create!( {
+                reward_id: r3.id,
+                user_id: u1.id
+        })
+
+Pledge.create!( {
+                reward_id: r4.id,
+                user_id: u2.id
         })
