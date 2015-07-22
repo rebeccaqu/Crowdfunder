@@ -13,45 +13,5 @@ Implementation Process:
 5. Break up project into workable pieces
 6. Determine deadlines for smaller milestones
 
-Models & Associations: 
-
-- Project : name, description, funding_goal, start_date, end_date, (photos), category
-  
-- User : first_name, last_name, email, password
-  
-- Pledge : amount ($)
-  
-- Reward : name, description, amount, availability 
-  
-- Category : name
-
-
-Project: 
-  
-- has_many: pledges
-- has_many: rewards
-- has_many: backers, through:pledges, class_name: 'User'
-- has_many: owners, class_name: 'User'
-  
-
-User: 
-  
-- has_many: pledges
-- has_many: owned_projects, class_name: 'Project'
-- has_many: backed_projects, through: pledges, class_name: 'Project'
-  
-
-Pledge: 
-  
-- belongs_to: user
-- belongs_to: project
-- belongs_to: reward
-  
-
-Reward:
-- belongs_to: project
-  
-- belongs_to: project
-
 
 
