@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   get 'user_sessions/new'
 
-
   root 'projects#index'
-
 
   #sorcery stuff here
   resources :user_sessions, only: [:create, :destroy]
