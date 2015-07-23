@@ -15,16 +15,10 @@ IMPLEMENTATION PROCESS
 
 MODELS
 
-  - Project: name, description, funding_goal, start_date, end_date, category, 
-  - Project Foreign IDs: user_id (owner)
-  
-  - User: first_name, last_name, email, password, password_confirmation
-    
-  - Reward: name, description, amount, availability
-  - Reward Foreign IDs: project_id
-  
-  - Pledge: ---
-  - Pledge Foreign IDs: user_id (backer), reward_id
+- Project: name, description, funding_goal, start_date, end_date, category, user_id (owner)
+- User: first_name, last_name, email, password, password_confirmation
+- Reward: name, description, amount, availability, project_id
+- Pledge: ---, user_id (backer), reward_id
 
 ASSOCIATION RELATIONSHIPS 
 
