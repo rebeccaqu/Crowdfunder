@@ -15,13 +15,13 @@ Implementation Process:
 
 Models and Relationships: 
   
-  Pledge: user_id, reward_id
+  - Pledge: user_id, reward_id
   
-  Project: name, description, funding_goal, start_date, end_date, category, user_id
+  - Project: name, description, funding_goal, start_date, end_date, category, user_id
   
-  Reward: name, description, amount, availability, project_id
+  - Reward: name, description, amount, availability, project_id
   
-  User: first_name, last_name, email, password, password_confirmation
+  - User: first_name, last_name, email, password, password_confirmation
 
 
 
