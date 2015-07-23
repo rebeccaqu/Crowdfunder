@@ -14,14 +14,14 @@ Implementation Process:
 6. Determine deadlines for smaller milestones
 
 Models and Relationships: 
-
-Pledge: user_id, reward_id
-
-Project: name, description, funding_goal, start_date, end_date, category, user_id
-
-Reward: name, description, amount, availability, project_id
-
-User: first_name, last_name, email, password, password_confirmation
+  
+  Pledge: user_id, reward_id
+  
+  Project: name, description, funding_goal, start_date, end_date, category, user_id
+  
+  Reward: name, description, amount, availability, project_id
+  
+  User: first_name, last_name, email, password, password_confirmation
 
 
 
