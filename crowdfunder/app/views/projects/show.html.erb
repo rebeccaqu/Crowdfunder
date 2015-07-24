@@ -5,7 +5,20 @@
 <p>End Date: <%= @project.end_date %></p>
 <p>Category: <%= @project.category %></p>
 
+<h2> Rewards </h2>
+<% @project.rewards.each do |r| %>
+<h4><em><%= r.name %></em> 
+ <%= button_to 'Back me!', pledges_path(project_id: r.project) %>
+</h4>
+<p>Description: <%= r.description %></p>
+<p>Amount: <%= r.amount %></p>
+<p>Availability: <%= r.availability %></p>
+
+<% end %> 
+
+
 <%= link_to 'Back', projects_path %>
+
 
 
 
