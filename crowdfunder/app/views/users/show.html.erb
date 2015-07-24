@@ -1,0 +1,13 @@
+<h1>
+  <%= "Hi #{@user.first_name} #{@user.last_name}" %>
+</h1>
+
+<%= link_to("Create Project", new_project_path) %>
+
+<h2>Owned projects</h2>
+
+<ul>
+  <%= @user.owned_projects.each do |p| %>
+    <li><%= "#{p.name}, #{p.description}, #{p.funding_goal}, #{p.start_date}, #{p.end_date}" %></li>
+  <% end %>
+</ul>
