@@ -3,14 +3,13 @@
 <ul>
   <% @projects.each do |p| %>
     <li>
-     <%= p.name %>
-     <%= p.description %>
-     <%= p.funding_goal %>
-     <%= p.start_date %>
-     <%= p.end_date %>
-     <%= p.category %>
-        <%= link_to 'See project', p %>
-
+      <%= p.name %>
+      <%= p.description %>
+      <%= p.funding_goal %>
+      <%= p.start_date %>
+      <%= p.end_date %>
+      <%= p.category %>
+      <%= link_to 'See project', project_path(p) %>
     </li>
   <% end %>
 </ul>

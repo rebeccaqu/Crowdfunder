@@ -23,7 +23,7 @@ class ProjectsController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
   end
 
@@ -31,6 +31,7 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+  end
 
   private
 
